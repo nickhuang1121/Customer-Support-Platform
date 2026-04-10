@@ -52,10 +52,9 @@ https://nickhuang1121.github.io/Customer-Support-Platform/
 
 - 使用 **Google 登入（Firebase Authentication）**
 - 未登入者：
-  - 可瀏覽案件與回覆（展示用途）
+  - 可瀏覽案件（展示用途）
 - 已登入者：
   - 可新增案件與留言
-  - 可修改 / 刪除「自己建立的資料」
 
 ---
 
