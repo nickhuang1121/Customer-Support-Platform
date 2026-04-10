@@ -193,7 +193,7 @@ export class UI {
             this.onLoadCaseDetail?.(this.caseId);
             return
         });
-        console.log("CL")
+
 
     }
     handleCreateMessageSubmit() {
