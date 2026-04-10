@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客服支援平台Customer Support Portal</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="warning">
+        請先登入Google帳號...
+    </div>
+    <div id="app">
+        <div>
+            <div class="sidebarActions">
+                <button id="openCreateCasePanelBtn">新增案件</button>
+                <button id="topLoginGoogleBtn">登入Google</button>
+                <button id="topLogoutBtn">登出</button>
+            </div>
+            <ul id="caseList"></ul>
+        </div>
+
+
+        <div class="caseDetail">
+            <div id="caseDetailThreadPanel">
+
+                <ul id="caseDetailThreadContainer">
+                    <li>案件標題：<span id="caseDetailTitleOutput">請先選擇案件...</span></li>
+                    <li>案件序號：<span id="caseDetailSerialOutput"></span></li>
+                    <li>案件內容：<span id="caseDetailContentOutput"></span></li>
+                    <li>接收單位：<span id="caseDetailDeptOutput"></span></li>
+                </ul>
+
+            </div>
+
+            <div id="caseMessageThreadPanel">
+                <h3>案件處理過程：</h3>
+                <ul id="caseMessageThreadContainer"></ul>
+
+
+                <div class="createMessagePanel">
+                    <h3>請選擇發言部門</h3>
+                    <div id="createMessageControl">
+                        <select name="" id="createMessageSelect">
+                        </select>
+                        <textarea name="" id="createMessageInput"></textarea>
+                        <button id="createMessageBtn">新增留言</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="fixWindow">
+        <section id="createCasePanel" class="createCasePanel">
+            <div id="createCaseSerialRow" class="createCaseSerialRow">
+                <h3 id="createCaseSerialLabel">案件編號</h3>
+                <output id="createCaseSerialOutput"></output>
+                <button id="createCaseSerialBtn" type="button">產生案件編號</button>
+            </div>
+            <div class="createCaseFieldRow">
+                <h3 id="createCaseTitleLabel">案件標題</h3>
+                <input id="createCaseTitleInput" type="text" />
+            </div>
+            <div class="createCaseFieldRow">
+                <h3 id="createCaseContentLabel">案件內容</h3>
+                <input id="createCaseContentInput" type="text" />
+            </div>
+
+            <div id="createCaseDeptPanel" class="createCaseDeptPanel">
+                <h3 id="createCaseDeptTitle">選擇轉送部門</h3>
+                <ul id="createCaseDeptOptionList" class="createCaseDeptOptionList">
+                </ul>
+            </div>
+
+            <div class="formActions">
+                <button id="createCaseBtn">新增案件case</button>
+                <button id="loginWithGoogleBtn">使用Google登入</button>
+                <button id="logoutBtn">登出</button>
+
+            </div>
+
+            <div id="closeBtn">X</div>
+        </section>
+    </div>
+
+    <script type="module" src="script/main.js"></script>
+</body>
+
+</html>
