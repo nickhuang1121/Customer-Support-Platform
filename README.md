@@ -91,4 +91,6 @@ https://nickhuang1121.github.io/Customer-Support-Platform/
   - Firestore（NoSQL Database）
   - onSnapshot（即時資料同步）
 
-}
+## 未來規劃
+- 留言狀態管理（未處理 / 已處理）
+- 指派功能（assign 至特定部門或人員）
