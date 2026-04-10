@@ -2,8 +2,16 @@
 
 ## 🧾 專案簡介
 本專案為一套以 **HTML / JavaScript + Firebase** 建構的客服支援平台，模擬企業內部跨部門處理客訴案件的流程。
-
 使用者可以建立案件、指派部門，並透過各部門回覆進行協作，完整呈現客服案件從建立到處理的流程。
+
+---
+## 🔗 Demo
+
+👉 線上展示：  
+https://nickhuang1121.github.io/Customer-Support-Platform/
+
+👉 或點擊進入：  
+[🚀 範例 DEMO](https://nickhuang1121.github.io/Customer-Support-Platform/)
 
 ---
 
