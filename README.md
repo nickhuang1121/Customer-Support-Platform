@@ -24,6 +24,15 @@ https://nickhuang1121.github.io/Customer-Support-Platform/
 
 ---
 
+## 🧪 如何體驗功能
+
+1. 直接瀏覽案件列表（免登入）
+2. 點擊案件查看處理流程
+3. 點擊登入（Google）
+4. 新增案件或留言
+
+---
+
 ## 🖥️ 功能特色
 
 ### 📌 案件管理（Case Management）
