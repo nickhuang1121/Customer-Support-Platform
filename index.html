@@ -25,6 +25,24 @@
 
 
         <div class="caseDetail">
+            <section id="caseDashboardPanel" class="caseDashboardPanel">
+                <div class="chartCard">
+                    <div class="chartHeader">
+                        <h3>部門案件量</h3>
+                        <span>By Department</span>
+                    </div>
+                    <div id="deptCaseChart" class="caseChart" role="img" aria-label="各部門案件量圖表"></div>
+                </div>
+
+                <div class="chartCard">
+                    <div class="chartHeader">
+                        <h3>每日新增案件</h3>
+                        <span>Daily Trend</span>
+                    </div>
+                    <div id="dailyCaseChart" class="caseChart" role="img" aria-label="每日新增案件趨勢圖"></div>
+                </div>
+            </section>
+
             <div id="caseDetailThreadPanel">
 
                 <ul id="caseDetailThreadContainer">
@@ -93,7 +111,7 @@
             <div id="closeBtn">X</div>
         </section>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
     <script type="module" src="script/main.js"></script>
 </body>
 

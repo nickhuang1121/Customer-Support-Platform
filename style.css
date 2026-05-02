@@ -291,7 +291,7 @@ body>button {
 
 .caseDetail {
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     gap: 18px;
     height: auto;
     align-self: start;
@@ -303,8 +303,55 @@ body>button {
     overflow: visible;
 }
 
+.caseDashboardPanel {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    min-width: 0;
+}
+
+.chartCard {
+    display: grid;
+    grid-template-rows: auto minmax(220px, 1fr);
+    gap: 12px;
+    min-width: 0;
+    padding: 20px 22px 18px;
+}
+
+.chartHeader {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    min-width: 0;
+}
+
+.chartHeader h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--text);
+}
+
+.chartHeader span {
+    flex: 0 0 auto;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+}
+
+.caseChart {
+    width: 100%;
+    height: 240px;
+    min-width: 0;
+}
+
 #caseDetailThreadPanel,
 #caseMessageThreadPanel,
+#caseDashboardPanel .chartCard,
 #createCasePanel {
     border: 1px solid rgba(230, 224, 217, 0.95);
     border-radius: 28px;
@@ -814,6 +861,10 @@ body>button {
 }
 
 @media (max-width: 1100px) {
+    .caseDashboardPanel {
+        grid-template-columns: 1fr;
+    }
+
     #caseDetailThreadContainer {
         grid-template-columns: 1fr;
     }
@@ -864,8 +915,18 @@ body>button {
 
     #caseDetailThreadPanel,
     #caseMessageThreadPanel,
+    #caseDashboardPanel .chartCard,
     #createCasePanel {
         border-radius: 24px;
+    }
+
+    .chartCard {
+        grid-template-rows: auto minmax(200px, 1fr);
+        padding: 18px;
+    }
+
+    .caseChart {
+        height: 210px;
     }
 
     .createCaseSerialRow,

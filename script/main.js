@@ -1,11 +1,16 @@
 import { UI } from "./ui.js";
 import { subscribeAuthState } from "./auth.js";
 import { fetchCases, createCase, fetchMessages, createMessage } from "./case.js"
+import { renderDailyCaseChart, renderDeptChart, resizeCharts } from "./charts.js";
 
 
 
 let currentUser = null;
 let cases = [];
+let caseCharts = {
+    deptCase: null,
+    dailyCase: null
+};
 
 subscribeAuthState(user => {
     currentUser = user;
@@ -126,6 +131,11 @@ const threadRefs = {
     caseMessageThreadContainerEl: document.getElementById("caseMessageThreadContainer")
 };
 
+const chartRefs = {
+    deptCaseChartEl: document.getElementById("deptCaseChart"),
+    dailyCaseChartEl: document.getElementById("dailyCaseChart")
+};
+
 const handlers = {
     onCreateCase: handleCreateCase,
     onLoadCaseDetail: handleLoadCaseDetail,
@@ -147,10 +157,28 @@ ui.init();
 async function loadCases() {
     cases = await fetchCases();
     ui.renderCaseLists(cases);
+    renderCaseCharts();
 }
 
-loadCases();
+function renderCaseCharts() {
+    caseCharts.deptCase = renderDeptChart(
+        chartRefs.deptCaseChartEl,
+        cases,
+        DEPT_META,
+        caseCharts.deptCase
+    );
+    caseCharts.dailyCase = renderDailyCaseChart(
+        chartRefs.dailyCaseChartEl,
+        cases,
+        caseCharts.dailyCase
+    );
+}
 
+window.addEventListener("resize", () => {
+    resizeCharts(Object.values(caseCharts));
+});
+
+loadCases();
 
 
 
